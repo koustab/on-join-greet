@@ -9,5 +9,5 @@ Channel Control on Various Networks
 Greet can be Enable / Disable in networks basis
 Channel Add/Remove Options
 
-This scripts works in mIRC and Addirc
+This scripts works in mIRC and Adiirc
 
