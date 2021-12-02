@@ -3,11 +3,11 @@ menu channel {
   ..Add Channel: set %ch. $+ $network $addtok($eval($+(%,ch.,$network),2),#,44) | echo -a 40* OnJoin Channel Greet Added to Channel: # in $network Network
   ..Del Channel: set %ch. $+ $network $remtok($eval($+(%,ch.,$network),2),#,1,44) | echo -a 40* OnJoin Channel Greet Removed from to Channel # in $network Network
   ..-
-  ..Enable: set %greet. $+ $network $addtok($eval($+(%,greet.,$network),2),$1,44 ,$style(2)) on | echo -a 40* OnJoin Channel Greet is Enabled for $network Network
-  ..Disable: unset %greet. $+ $network $addtok($eval($+(%,greet.,$network),2),1,44 ,$style(2))  | echo -a 40* OnJoin Channel Greet is Disabled $for $network Network
+  ..Enable: set %greet. $+ $network $addtok($eval($+(%,greet.,$network),2),$1,44 ,$style(2)) on | echo 40 -a * OnJoin Channel Greet is Enabled for $network Network
+  ..Disable: unset %greet. $+ $network $addtok($eval($+(%,greet.,$network),2),1,44 ,$style(2))  | echo 40 -a * OnJoin Channel Greet is Disabled $for $network Network
   ..-
-  ..Status { if ($eval($+(%,greet.,$network),2) == on ) echo 4Auto Greet for $network is ON | else echo -a 4Auto Greet for $network is OFF }
-  ..Channel List  { if (%greet. [ $+ [ $network ] ] == on) echo -a 4List of active channel $eval($+(%,ch.,$network),2) $+ ! | else echo -a 4Auto Greet is inactive in this Network.}
+  ..Status { if ($eval($+(%,greet.,$network),2) == on ) echo 4Auto Greet for $network is ON | else echo 4 -a Auto Greet for $network is OFF }
+  ..Channel List  { if (%greet. [ $+ [ $network ] ] == on) echo -a 4List of active channel $eval($+(%,ch.,$network),2) $+ ! | else echo 4 -a Auto Greet is inactive in this Network.}
   }
 }
 
